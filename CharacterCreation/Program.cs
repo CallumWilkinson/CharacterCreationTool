@@ -1,4 +1,6 @@
-﻿namespace CharacterCreation
+﻿using System.ComponentModel.Design;
+
+namespace CharacterCreation
 {
     internal class Program
     {
@@ -20,6 +22,7 @@
                 Console.WriteLine("Error: That class doesn't exist, try choosing from the list above");
             }
 
+            Mage player = null;
 
             //user makes a mage
             if (userClass.Equals("Mage"))
@@ -27,11 +30,37 @@
 
                 Console.WriteLine("Enter a name for your character:");
                 string name = Console.ReadLine();
-                Mage userCharacter = new Mage(name);
+                player = new Mage(name);
                 Console.WriteLine("Hello " + name);
 
             }
 
+            //combat starts
+
+            //make a warrior
+            Warrior enemy1 = new Warrior("ChadWarrior");
+            Console.WriteLine("You encountered a warrior called " + enemy1.Name);
+            Console.WriteLine("Player health: " + player.BaseHealth + 
+                "\nPlayer attack: " + player.MeleeDamage );
+            Console.WriteLine("Enemy Health: " + enemy1.BaseHealth +
+                "\nEnemy attack " + enemy1.MeleeDamage);
+            Console.WriteLine("Press 1 to attack " + enemy1.Name);
+
+            int userInput = Convert.ToInt32(Console.ReadLine());
+            switch (userInput)
+            {
+                case 1:
+                    player.AttackCharacter(enemy1);
+                    Console.WriteLine("Player health: " + player.BaseHealth +
+                "\nPlayer attack: " + player.MeleeDamage);
+                    Console.WriteLine("Enemy Health: " + enemy1.BaseHealth +
+                        "\nEnemy attack " + enemy1.MeleeDamage);
+                    break;
+
+                default: Console.WriteLine("must enter 1 to attack");
+                    break;
+
+            }
 
 
 
