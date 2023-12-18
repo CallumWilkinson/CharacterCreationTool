@@ -13,9 +13,9 @@ namespace CharacterCreation
 
 
         //constructor with parameters
-        public Mage(string name) /*: base(name: name, baseHealth: 100)*/
+        public Mage(string name, int baseHealth, int MeleeDamage)
+            : base(name, baseHealth, MeleeDamage)   
         {
-            this.Name = name;
 
         }
 

@@ -16,3 +16,4 @@ C:\Users\cmw65\Documents\myCode\CharacterCreation\CharacterCreation\obj\Debug\ne
 C:\Users\cmw65\Documents\myCode\CharacterCreation\CharacterCreation\obj\Debug\net6.0\CharacterCreation.pdb
 C:\Users\cmw65\Documents\myCode\CharacterCreation\CharacterCreation\obj\Debug\net6.0\CharacterCreation.genruntimeconfig.cache
 C:\Users\cmw65\Documents\myCode\CharacterCreation\CharacterCreation\obj\Debug\net6.0\ref\CharacterCreation.dll
+C:\Users\cmw65\Documents\myCode\CharacterCreation\CharacterCreation\obj\Debug\net6.0\CharacterCreation.sourcelink.json

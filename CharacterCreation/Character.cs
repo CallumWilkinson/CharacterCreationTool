@@ -7,7 +7,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace CharacterCreation
 {
-    public class Character
+    public abstract class Character
     {
         //fields
         public string Name { get; set; }

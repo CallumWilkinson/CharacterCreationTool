@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace CharacterCreation
 {
-    //public class Warrior : Character
-    //{
+    public class Warrior : Character
+    {
 
         //fields
-        //public string name;
-        //public int baseHealth = 100;
-        //public int baseRage = 100;
+        
 
-        ////contructor with parameters
-        //public Warrior(string name)
-        //{ 
-        //    this.name = name; 
-        //}
+        //contructor with parameters
+        public Warrior(string name, int baseHealth, int MeleeDamage)
+           : base(name, baseHealth, MeleeDamage)
+        {
+
+        }
 
         //methods
-    //}
+    }
 }
