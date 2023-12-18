@@ -26,31 +26,35 @@ namespace CharacterCreation.Tests
 
         //}
 
-        [Test(Description = "Character A Attacks Character B")]
+        //[Test(Description = "Character A Attacks Character B")]
 
-        public void TestAttack()
-        {
-            //arrange
-            var CharacterA = new Character("Nibzy", 10, 2);
-            var CharacterB = new Character("Chadowform", 10, 1);
+        //public void TestAttack()
+        //{
+        //    ////arrange
+        //    //var CharacterA = new Character("Nibzy", 10, 2);
+        //    //var CharacterB = new Character("Chadowform", 10, 1);
 
-            //act
-            CharacterA.AttackCharacter(CharacterB);
-            int CharBBaseHealth = CharacterB.BaseHealth;
+        //    ////act
+        //    //CharacterA.AttackCharacter(CharacterB);
+        //    //int CharBBaseHealth = CharacterB.BaseHealth;
 
 
-            //assert
-            Assert.That(CharBBaseHealth, Is.EqualTo(8));
-            
-        }
+        //    ////assert
+        //    //Assert.That(CharBBaseHealth, Is.EqualTo(8));
+
+        //}
 
         [Test(Description = "Mage attacks warrior")]
         public void TestAttack2()
         {
             //arrange
-
+            var mage = new Mage("Nibzy", 8, 2);
+            var warrior = new Warrior("Chadwar", 10, 4);
+               
 
             //act
+            mage.AttackCharacter(warrior);
+            int warriorHealth = warrior.BaseHealth;
 
             //assert
             Assert.That(warriorHealth, Is.EqualTo(8));

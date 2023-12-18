@@ -104,3 +104,4 @@ C:\Users\cmw65\Documents\myCode\CharacterCreation\CharacterCreation.Tests\obj\De
 C:\Users\cmw65\Documents\myCode\CharacterCreation\CharacterCreation.Tests\obj\Debug\net6.0\CharacterCreation.Tests.pdb
 C:\Users\cmw65\Documents\myCode\CharacterCreation\CharacterCreation.Tests\obj\Debug\net6.0\CharacterCreation.Tests.genruntimeconfig.cache
 C:\Users\cmw65\Documents\myCode\CharacterCreation\CharacterCreation.Tests\obj\Debug\net6.0\ref\CharacterCreation.Tests.dll
+C:\Users\cmw65\Documents\myCode\CharacterCreation\CharacterCreation.Tests\obj\Debug\net6.0\CharacterCreation.Tests.sourcelink.json
