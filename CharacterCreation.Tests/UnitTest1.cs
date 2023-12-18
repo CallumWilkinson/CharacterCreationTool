@@ -16,8 +16,8 @@ namespace CharacterCreation.Tests
         public void TestAttack2()
         {
             //arrange
-            var mage = new Mage("Nibzy", 8, 2);
-            var warrior = new Warrior("Chadwar", 10, 4);
+            var mage = new Mage("Nibzy");
+            var warrior = new Warrior("Chadwar");
                
 
             //act
@@ -25,14 +25,14 @@ namespace CharacterCreation.Tests
             int warriorHealth = warrior.BaseHealth;
 
             //assert
-            Assert.That(warriorHealth, Is.EqualTo(8));
+            Assert.That(warriorHealth, Is.EqualTo(90));
         }
 
 
         [Test(Description = "Make a warrior called Vein")]
         public void testName()
         {
-            var warrior = new Warrior("Vein", 100, 50);
+            var warrior = new Warrior("Vein");
 
 
             string warName = warrior.Name;

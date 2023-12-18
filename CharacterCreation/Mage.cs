@@ -9,12 +9,12 @@ namespace CharacterCreation
     public class Mage : Character
     {
         //fields
-
+        
 
 
         //constructor with parameters
-        public Mage(string name, int baseHealth, int MeleeDamage)
-            : base(name, baseHealth, MeleeDamage)   
+        public Mage(string name)
+            : base(name, 80, 10)   
         {
 
         }

@@ -21,20 +21,20 @@
             }
 
 
-            ////user makes a mage
-            //if (userClass.Equals("Mage"))
-            //{
+            //user makes a mage
+            if (userClass.Equals("Mage"))
+            {
 
-            //    Console.WriteLine("Enter a name for your character:");
-            //    string name = Console.ReadLine();
-            //    Mage userCharacter = new Mage(name);
-            //    Console.WriteLine("Hello " + name);
+                Console.WriteLine("Enter a name for your character:");
+                string name = Console.ReadLine();
+                Mage userCharacter = new Mage(name);
+                Console.WriteLine("Hello " + name);
 
-            //}
+            }
 
 
 
-           
+
 
 
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CharacterCreation.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70cf250142e0e2827be869cbdd1530b8d7a8e5cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01b3206c138ffc636d273176f52fb00b50a89f2c")]
 [assembly: System.Reflection.AssemblyProductAttribute("CharacterCreation.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CharacterCreation.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
