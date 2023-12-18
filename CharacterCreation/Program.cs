@@ -47,20 +47,29 @@ namespace CharacterCreation
             Console.WriteLine("Press 1 to attack " + enemy1.Name);
 
             int userInput = Convert.ToInt32(Console.ReadLine());
-            switch (userInput)
-            {
-                case 1:
-                    player.AttackCharacter(enemy1);
-                    Console.WriteLine("Player health: " + player.BaseHealth +
-                "\nPlayer attack: " + player.MeleeDamage);
-                    Console.WriteLine("Enemy Health: " + enemy1.BaseHealth +
-                        "\nEnemy attack " + enemy1.MeleeDamage);
-                    break;
 
-                default: Console.WriteLine("must enter 1 to attack");
-                    break;
+                switch (userInput)
+                {
+                    case 1:
+                    //combat loop
+                    while (player.BaseHealth > 0 && enemy1.BaseHealth > 0)
+                    {
+                        player.AttackCharacter(enemy1);
+                        Console.WriteLine("Player health: " + player.BaseHealth );
+                        Console.WriteLine("Enemy Health: " + enemy1.BaseHealth);
 
-            }
+                    }
+                    if (player.BaseHealth > enemy1.BaseHealth)
+                        Console.WriteLine("You win");
+                    else Console.WriteLine("You loose");
+                        break;
+                        
+
+                    default: Console.WriteLine("must enter 1 to attack");
+                        break;
+
+                }
+            
 
 
 
