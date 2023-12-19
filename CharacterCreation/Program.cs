@@ -30,7 +30,7 @@ namespace CharacterCreation
 
                 Console.WriteLine("Enter a name for your character:");
                 string name = Console.ReadLine();
-                player = new Mage(name);
+                player = new Mage(name, 80, 20);
                 Console.WriteLine("Hello " + name);
 
             }
@@ -38,38 +38,32 @@ namespace CharacterCreation
             //combat starts
 
             //make a warrior
-            Warrior enemy1 = new Warrior("ChadWarrior");
+            Warrior enemy1 = new Warrior("ChadWarrior", 100, 30);
             Console.WriteLine("You encountered a warrior called " + enemy1.Name);
-            Console.WriteLine("Player health: " + player.BaseHealth + 
-                "\nPlayer attack: " + player.MeleeDamage );
+            Console.WriteLine("Player health: " + player.BaseHealth +
+                "\nPlayer attack: " + player.MeleeDamage);
             Console.WriteLine("Enemy Health: " + enemy1.BaseHealth +
                 "\nEnemy attack " + enemy1.MeleeDamage);
             Console.WriteLine("Press 1 to attack " + enemy1.Name);
 
             int userInput = Convert.ToInt32(Console.ReadLine());
 
-                switch (userInput)
-                {
-                    case 1:
+            switch (userInput)
+            {
+                case 1:
                     //combat loop
-                    while (player.BaseHealth > 0 && enemy1.BaseHealth > 0)
-                    {
-                        player.AttackCharacter(enemy1);
-                        Console.WriteLine("Player health: " + player.BaseHealth );
-                        Console.WriteLine("Enemy Health: " + enemy1.BaseHealth);
 
-                    }
-                    if (player.BaseHealth > enemy1.BaseHealth)
-                        Console.WriteLine("You win");
-                    else Console.WriteLine("You loose");
-                        break;
-                        
+                    var combat = new CombatSystem();
+                    combat.Combat(player, enemy1);
+                    break;
 
-                    default: Console.WriteLine("must enter 1 to attack");
-                        break;
+                default:
+                    Console.WriteLine("must enter 1 to attack");
+                    break;
 
-                }
-            
+
+            }
+
 
 
 

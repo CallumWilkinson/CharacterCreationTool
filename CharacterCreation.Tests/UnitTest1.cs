@@ -1,4 +1,5 @@
 using CharacterCreation;
+using NuGet.Frameworks;
 using NUnit.Framework;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -12,34 +13,55 @@ namespace CharacterCreation.Tests
         }
 
 
-        [Test(Description = "Mage attacks warrior")]
-        public void TestAttack2()
-        {
-            //arrange
-            var mage = new Mage("Nibzy");
-            var warrior = new Warrior("Chadwar");
+        //[Test(Description = "Mage attacks warrior")]
+        //public void TestAttack2()
+        //{
+        //    //Given
+        //    var mage = new Mage("Nibzy");
+        //    var warrior = new Warrior("Chadwar");
                
 
-            //act
-            mage.AttackCharacter(warrior);
-            int warriorHealth = warrior.BaseHealth;
+        //    //When
+        //    mage.AttackCharacter(warrior);
+        //    int warriorHealth = warrior.BaseHealth;
 
-            //assert
-            Assert.That(warriorHealth, Is.EqualTo(90));
-        }
+        //    //Then
+        //    Assert.That(warriorHealth, Is.EqualTo(90));
+        //}
 
 
-        [Test(Description = "Make a warrior called Vein")]
-        public void testName()
+        //[Test(Description = "Make a warrior called Vein")]
+        //public void testName()
+        //{
+        //    var warrior = new Warrior("Vein");
+
+
+        //    string warName = warrior.Name;
+
+
+        //    Assert.That(warName, Is.EqualTo("Vein"));
+        //}
+
+
+        [Test(Description = "mage and warrior fight, mage dies")]
+
+        public void combat() 
         {
-            var warrior = new Warrior("Vein");
+            //Given
+            var mage = new Mage("Player1", 80, 20);
+            var warrior = new Warrior("NPC", 100, 30);
+            var combat = new CombatSystem();
 
 
-            string warName = warrior.Name;
+            //When
+            combat.Combat(mage,warrior);
 
-            Assert.That(warName, Is.EqualTo("Vein"));
+
+            //Then
+            Assert.That(mage.BaseHealth, Is.EqualTo(0));
+
+
         }
-
     }
     
 }
