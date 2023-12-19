@@ -62,6 +62,25 @@ namespace CharacterCreation.Tests
 
 
         }
+
+        [Test(Description ="mage attacks then heals")]
+
+        public void combat2()
+        {
+            //Given
+            var mage = new Mage("Player1", 80, 20);
+            var warrior = new Warrior("NPC", 100, 30);
+            var combat = new CombatSystem();
+
+
+            //When
+            combat.Combat(mage,warrior);
+
+            //Then
+            Assert.That(warrior.BaseHealth, Is.EqualTo(80));
+
+        }
+        
     }
     
 }

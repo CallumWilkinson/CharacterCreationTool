@@ -19,12 +19,15 @@ namespace CharacterCreation
         public int MeleeDamage { get; private set; }
         public int Defense { get; private set; }
 
+        public int HealPower = 10;
+
         //constructor
         public Character(string name, int baseHealth, int meleeDamage)
         {
             this.Name = name;
             this.BaseHealth = baseHealth;
             this.MeleeDamage = meleeDamage;
+           
         }
 
         //methods
@@ -38,6 +41,12 @@ namespace CharacterCreation
         {
             target.TakeDamage(MeleeDamage);
         }
+
+        public void HealSelf()
+        {
+            BaseHealth = Math.Max(0, BaseHealth + HealPower);
+        }
+
        
     
     }

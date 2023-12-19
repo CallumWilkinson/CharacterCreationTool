@@ -16,10 +16,22 @@ namespace CharacterCreation
             while (player.BaseHealth > 0 && enemy.BaseHealth > 0)
             {
                 //player's turn
-                player.AttackCharacter(enemy);
+                Console.WriteLine("press a to attack or h to heal");
+                string playerInput = Convert.ToString(Console.ReadLine());
+                if (playerInput == "a")
+                {
+                    player.AttackCharacter(enemy);
+                }
+                else if (playerInput == "h") 
+                {
+                    player.HealSelf();
+                }
+
 
                 //enemy's turn
                 enemy.AttackCharacter(player);
+
+                
                
             }
             if (player.BaseHealth > enemy.BaseHealth)
