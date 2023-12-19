@@ -8,5 +8,7 @@ namespace CharacterCreation
 {
     public class Spell
     {
+
+      
     }
 }

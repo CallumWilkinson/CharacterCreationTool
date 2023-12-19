@@ -14,12 +14,14 @@ namespace CharacterCreation
 
         public int BaseHealth { get; private set; }
         public int CurrentHealth { get; private set; }
-        public int BaseMana { get; private set; }
+        public int BaseMana = 100;
         public int CurrentMana { get; private set; }
         public int MeleeDamage { get; private set; }
         public int Defense { get; private set; }
 
         public int HealPower = 10;
+
+       
 
         //constructor
         public Character(string name, int baseHealth, int meleeDamage)
@@ -46,7 +48,10 @@ namespace CharacterCreation
         {
             BaseHealth = Math.Max(0, BaseHealth + HealPower);
         }
-
+        public void reduceMana(int manaCost)
+        {
+            BaseMana = Math.Max(0, BaseMana - manaCost);
+        }
        
     
     }
