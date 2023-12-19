@@ -43,25 +43,8 @@ namespace CharacterCreation.Tests
         //}
 
 
-        [Test(Description = "mage and warrior fight, mage dies")]
-
-        public void combat() 
-        {
-            //Given
-            var mage = new Mage("Player1", 80, 20);
-            var warrior = new Warrior("NPC", 100, 30);
-            var combat = new CombatSystem();
-
-
-            //When
-            combat.Combat(mage,warrior);
-
-
-            //Then
-            Assert.That(mage.BaseHealth, Is.EqualTo(0));
-
-
-        }
+        
+      
 
         [Test(Description ="mage attacks then heals")]
 
@@ -70,14 +53,35 @@ namespace CharacterCreation.Tests
             //Given
             var mage = new Mage("Player1", 80, 20);
             var warrior = new Warrior("NPC", 100, 30);
-            var combat = new CombatSystem();
-
+            
 
             //When
-            combat.Combat(mage,warrior);
+            mage.AttackCharacter(warrior);
 
-            //Then
+            //then
             Assert.That(warrior.BaseHealth, Is.EqualTo(80));
+
+            //when
+            warrior.AttackCharacter(mage);
+
+            //then
+            Assert.That(mage.BaseHealth, Is.EqualTo(50));
+
+            //when
+            mage.HealSelf();
+
+            //then
+            Assert.That(mage.BaseHealth, Is.EqualTo(60));
+
+            //when 
+            warrior.AttackCharacter(mage);
+
+            //then
+            Assert.That(mage.BaseHealth, Is.EqualTo(30));
+
+
+           
+            
 
         }
         
