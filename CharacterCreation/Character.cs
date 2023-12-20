@@ -48,7 +48,7 @@ namespace CharacterCreation
         {
             BaseHealth = Math.Max(0, BaseHealth + HealPower);
         }
-        public void reduceMana(int manaCost)
+        public void ReduceMana(int manaCost)
         {
             BaseMana = Math.Max(0, BaseMana - manaCost);
         }

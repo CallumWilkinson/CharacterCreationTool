@@ -96,9 +96,9 @@ namespace CharacterCreation.Tests
             var fireball = new Fireball();
 
 
-
             //when
-            fireball.cast(mage, warrior);
+            mage.cast(fireball, warrior);
+
 
             //then
             Assert.That(mage.BaseMana, Is.EqualTo(90));

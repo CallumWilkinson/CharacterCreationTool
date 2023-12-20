@@ -6,9 +6,22 @@ using System.Threading.Tasks;
 
 namespace CharacterCreation
 {
-    public class Spell
+    public abstract class Spell
     {
 
+        //fields 
+
+        int spellDamage {  get; set; }
+        int manaCost { get; set; }
       
+        //contructor
+        public Spell(int spellDamage, int manaCost)
+        {
+            this.spellDamage = spellDamage;
+            this.manaCost = manaCost;
+        }
+
+
+        //methods
     }
 }

@@ -22,6 +22,10 @@ namespace CharacterCreation
 
 
         //methods
-
+        public void cast(Fireball fireball, Character target)
+        {
+            target.TakeDamage(fireball.spellDamage) ;
+            this.ReduceMana(fireball.manaCost);
+        }
     }
 }

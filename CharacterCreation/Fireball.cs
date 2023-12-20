@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace CharacterCreation
 {
-    public class Fireball : Spell
+    public class Fireball
     {
 
         //fields
-        string name = "Fireball";
-        string description = "Hurl a ball of fire at the enemy dealing 10 damage";
-        int manaCost = 10;
-        int spellDamage = 30;
+        public string name = "Fireball";
+        public string description = "Hurl a ball of fire at the enemy dealing 10 damage";
+        public int manaCost = 10;
+        public int spellDamage = 30;
 
 
         //constructor
+        public Fireball()
+        {
+           
 
+        }
 
         //methods
 
-        public void cast(Character caster, Character target)
-        {
-            target.TakeDamage(spellDamage);
-            caster.reduceMana(manaCost);
-        }
+
 
 
 
