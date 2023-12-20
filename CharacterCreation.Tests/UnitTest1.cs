@@ -88,7 +88,7 @@ namespace CharacterCreation.Tests
 
         [Test(Description = "Mage casts fireball on warrior")]
 
-        public void castingspell()
+        public void castingfireball()
         {
             //given
             var mage = new Mage("Nibz", 100, 20);
@@ -104,7 +104,26 @@ namespace CharacterCreation.Tests
             Assert.That(mage.BaseMana, Is.EqualTo(90));
             Assert.That(warrior.BaseHealth, Is.EqualTo(170));
         }
-        
+
+        [Test(Description = "Mage casts frostbolt on warrior")]
+
+        public void castingfrostbolt()
+        {
+            //given
+            var mage = new Mage("Nibz", 100, 20);
+            var warrior = new Warrior("James", 200, 5);
+            var frostbolt = new Frostbolt();
+
+
+            //when
+            mage.cast(frostbolt, warrior);
+
+
+            //then
+            Assert.That(mage.BaseMana, Is.EqualTo(80));
+            Assert.That(warrior.BaseHealth, Is.EqualTo(150));
+        }
+
     }
     
 }

@@ -11,12 +11,14 @@ namespace CharacterCreation
 
         //fields 
 
-        int spellDamage {  get; set; }
-        int manaCost { get; set; }
-      
+        public int spellDamage;
+        public int manaCost;
+        public string name;
+
         //contructor
-        public Spell(int spellDamage, int manaCost)
+        public Spell(string name,int spellDamage, int manaCost)
         {
+            this.name = name;
             this.spellDamage = spellDamage;
             this.manaCost = manaCost;
         }
