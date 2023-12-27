@@ -19,23 +19,24 @@ namespace CharacterCreation.Tests
         public void TestAttack()
         {
             //Given
-            var mage = new Mage("Nibzy", 100, 20);
-            var warrior = new Warrior("Chadwar", 100, 10);
+            var mage = new Mage("Nibzy", 100);
+            var warrior = new Warrior("Chadwar", 100);
+            var autoattack = new AutoAttack();
 
 
             //When
-            mage.AttackCharacter(warrior);
+            mage.CastDamageSpell(autoattack, warrior);
             int warriorHealth = warrior.BaseHealth;
 
             //Then
-            Assert.That(warriorHealth, Is.EqualTo(80));
+            Assert.That(warriorHealth, Is.EqualTo(95));
         }
 
 
         [Test(Description = "Make a warrior called Vein")]
         public void testName()
         {
-            var warrior = new Warrior("Vein", 100, 20);
+            var warrior = new Warrior("Vein", 100);
 
 
             string warName = warrior.Name;
@@ -53,33 +54,34 @@ namespace CharacterCreation.Tests
         public void combat2()
         {
             //Given
-            var mage = new Mage("Player1", 80, 20);
-            var warrior = new Warrior("NPC", 100, 30);
+            var mage = new Mage("Player1", 100);
+            var warrior = new Warrior("NPC", 100);
+            var autoattack = new AutoAttack();
             
 
             //When
-            mage.AttackCharacter(warrior);
+            mage.CastDamageSpell(autoattack, warrior);
 
             //then
-            Assert.That(warrior.BaseHealth, Is.EqualTo(80));
+            Assert.That(warrior.BaseHealth, Is.EqualTo(95));
 
             //when
-            warrior.AttackCharacter(mage);
+            warrior.CastDamageSpell(autoattack, mage);
 
             //then
-            Assert.That(mage.BaseHealth, Is.EqualTo(50));
+            Assert.That(mage.BaseHealth, Is.EqualTo(95));
 
             //when
             mage.HealSelf();
 
             //then
-            Assert.That(mage.BaseHealth, Is.EqualTo(60));
+            Assert.That(mage.BaseHealth, Is.EqualTo(105));
 
             //when 
-            warrior.AttackCharacter(mage);
+            warrior.CastDamageSpell(autoattack, mage);
 
             //then
-            Assert.That(mage.BaseHealth, Is.EqualTo(30));
+            Assert.That(mage.BaseHealth, Is.EqualTo(100));
 
 
            
@@ -93,17 +95,17 @@ namespace CharacterCreation.Tests
         public void castingfireball()
         {
             //given
-            var mage = new Mage("Nibz", 100, 20);
-            var warrior = new Warrior("James", 200, 5);
+            var mage = new Mage("Nibz", 100);
+            var warrior = new Warrior("James", 200);
             var fireball = new Fireball();
 
 
             //when
-            mage.cast(fireball, warrior);
+            mage.CastDamageSpell(fireball, warrior);
 
 
             //then
-            Assert.That(mage.BaseMana, Is.EqualTo(90));
+            Assert.That(mage.BaseMana, Is.EqualTo(70));
             Assert.That(warrior.BaseHealth, Is.EqualTo(170));
         }
 
@@ -112,18 +114,18 @@ namespace CharacterCreation.Tests
         public void castingfrostbolt()
         {
             //given
-            var mage = new Mage("Nibz", 100, 20);
-            var warrior = new Warrior("James", 200, 5);
+            var mage = new Mage("Nibz", 100);
+            var warrior = new Warrior("James", 200);
             var frostbolt = new Frostbolt();
 
 
             //when
-            mage.cast(frostbolt, warrior);
+            mage.CastDamageSpell(frostbolt, warrior);
 
 
             //then
-            Assert.That(mage.BaseMana, Is.EqualTo(80));
-            Assert.That(warrior.BaseHealth, Is.EqualTo(150));
+            Assert.That(mage.BaseMana, Is.EqualTo(50));
+            Assert.That(warrior.BaseHealth, Is.EqualTo(180));
         }
 
     }

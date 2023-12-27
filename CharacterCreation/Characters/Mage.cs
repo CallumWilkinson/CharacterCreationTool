@@ -14,8 +14,8 @@ namespace CharacterCreation.Characters
 
 
         //constructor with parameters
-        public Mage(string name, int mageHealth, int mageDamage)
-            : base(name, mageHealth, mageDamage)
+        public Mage(string name, int mageHealth)
+            : base(name, mageHealth)
         {
 
         }
@@ -23,10 +23,8 @@ namespace CharacterCreation.Characters
 
 
         //methods
-        public void cast(DamageSpell spell, Character target)
-        {
-            target.TakeDamage(spell.spellDamage);
-            ReduceMana(spell.manaCost);
-        }
+        
+
+
     }
 }

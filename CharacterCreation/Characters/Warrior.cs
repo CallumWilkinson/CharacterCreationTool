@@ -13,8 +13,8 @@ namespace CharacterCreation.Characters
 
 
         //contructor with parameters
-        public Warrior(string name, int warHealth, int warDamage)
-           : base(name, warHealth, warDamage)
+        public Warrior(string name, int warHealth)
+           : base(name, warHealth)
         {
 
         }

@@ -18,7 +18,7 @@ namespace CharacterCreation.Spells
 
         //constructor
         public Fireball()
-            : base("Fireball", 30, 10)
+            : base("Fireball", 30, 30)
         {
 
 
