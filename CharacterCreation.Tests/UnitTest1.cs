@@ -1,6 +1,8 @@
 using CharacterCreation;
 using NuGet.Frameworks;
 using NUnit.Framework;
+using CharacterCreation.Characters;
+using CharacterCreation.Spells;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace CharacterCreation.Tests

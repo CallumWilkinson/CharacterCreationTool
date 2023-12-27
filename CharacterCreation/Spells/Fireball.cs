@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CharacterCreation
+namespace CharacterCreation.Spells
 {
     public class Fireball : DamageSpell
     {
@@ -20,8 +20,8 @@ namespace CharacterCreation
         public Fireball()
             : base("Fireball", 30, 10)
         {
-           
-            
+
+
         }
 
         //methods

@@ -5,55 +5,63 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace CharacterCreation
+namespace CharacterCreation.Characters
 {
     public abstract class Character
     {
-        //fields
+        //FIELDS
         public string Name { get; set; }
 
         public int BaseHealth { get; private set; }
-        public int CurrentHealth { get; private set; }
+
         public int BaseMana = 100;
-        public int CurrentMana { get; private set; }
+
         public int MeleeDamage { get; private set; }
-        public int Defense { get; private set; }
+
 
         public int HealPower = 10;
 
-       
 
-        //constructor
+
+        //CONSTRUCTOR
         public Character(string name, int baseHealth, int meleeDamage)
         {
-            this.Name = name;
-            this.BaseHealth = baseHealth;
-            this.MeleeDamage = meleeDamage;
-           
+            Name = name;
+            BaseHealth = baseHealth;
+            MeleeDamage = meleeDamage;
+
         }
 
-        //methods
+        //METHODS
+
+
+
+        //character attacks another character, calling the take damage function on its target
+        public void AttackCharacter(Character target)
+        {
+            target.TakeDamage(MeleeDamage);
+        }
+
+
+        //character takes damage to reduce health by x ammount
         public void TakeDamage(int damage)
         {
             BaseHealth = Math.Max(0, BaseHealth - damage); // Ensure health doesn't go below 0
 
         }
 
-        public void AttackCharacter(Character target)
-        {
-            target.TakeDamage(MeleeDamage);
-        }
-
+        //character heals itself, increaseing its health by x ammount
         public void HealSelf()
         {
             BaseHealth = Math.Max(0, BaseHealth + HealPower);
         }
 
+        //character reduces its base manage by x ammount
         public void ReduceMana(int manaCost)
         {
             BaseMana = Math.Max(0, BaseMana - manaCost);
         }
-       
-    
+
+
     }
 }

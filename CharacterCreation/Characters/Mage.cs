@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CharacterCreation.Spells;
 
-namespace CharacterCreation
+namespace CharacterCreation.Characters
 {
     public class Mage : Character
     {
@@ -22,10 +23,10 @@ namespace CharacterCreation
 
 
         //methods
-        public void cast(Spell spell, Character target)
+        public void cast(DamageSpell spell, Character target)
         {
-            target.TakeDamage(spell.spellDamage) ;
-            this.ReduceMana(spell.manaCost);
+            target.TakeDamage(spell.spellDamage);
+            ReduceMana(spell.manaCost);
         }
     }
 }

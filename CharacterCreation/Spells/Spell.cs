@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CharacterCreation
+namespace CharacterCreation.Spells
 {
     public abstract class Spell
     {
@@ -19,7 +19,7 @@ namespace CharacterCreation
         {
             this.name = name;
             this.manaCost = manaCost;
-           
+
         }
 
 

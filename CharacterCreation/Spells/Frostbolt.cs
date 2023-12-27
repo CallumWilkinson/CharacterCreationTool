@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CharacterCreation
+namespace CharacterCreation.Spells
 {
     public class Frostbolt : DamageSpell
     {
@@ -17,7 +17,7 @@ namespace CharacterCreation
         public Frostbolt()
             : base("Frostbolt", 50, 20)
         {
-            
+
         }
     }
 }

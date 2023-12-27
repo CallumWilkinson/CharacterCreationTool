@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CharacterCreation
+namespace CharacterCreation.Spells
 {
     public class Healing_Touch : HealingSpell
     {

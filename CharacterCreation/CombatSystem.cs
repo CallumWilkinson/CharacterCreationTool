@@ -4,6 +4,8 @@ using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CharacterCreation.Characters;
+using CharacterCreation.Spells;
 
 namespace CharacterCreation
 {

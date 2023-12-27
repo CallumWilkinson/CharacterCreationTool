@@ -1,4 +1,7 @@
 ﻿using System.ComponentModel.Design;
+using CharacterCreation.Characters;
+using CharacterCreation.Spells;
+
 
 namespace CharacterCreation
 {

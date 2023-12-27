@@ -4,19 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CharacterCreation
+namespace CharacterCreation.Spells
 {
-    public class DamageSpell : Spell
+    public class HealingSpell : Spell
     {
 
         //fields
-        public int spellDamage;
+        public int healPower;
 
         //constructor
-        public DamageSpell(string name, int manaCost, int spellDamage)
+        public HealingSpell(string name, int manaCost, int healPower)
            : base(name, manaCost)
         {
-            this.spellDamage = spellDamage;
+            this.healPower = healPower;
         }
 
 
