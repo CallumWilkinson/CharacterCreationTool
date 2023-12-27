@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CharacterCreation
 {
-    public class Fireball : Spell
+    public class Fireball : DamageSpell
     {
 
         //fields

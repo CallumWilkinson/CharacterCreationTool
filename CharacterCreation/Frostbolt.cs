@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CharacterCreation
 {
-    public class Frostbolt : Spell
+    public class Frostbolt : DamageSpell
     {
         //public string Name = "Frostbolt";
         //public int SpellDamage = 50;
