@@ -17,7 +17,7 @@ namespace CharacterCreation
         public Frostbolt()
             : base("Frostbolt", 50, 20)
         {
-           
+            
         }
     }
 }

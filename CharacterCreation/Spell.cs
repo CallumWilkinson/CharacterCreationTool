@@ -21,6 +21,7 @@ namespace CharacterCreation
             this.name = name;
             this.spellDamage = spellDamage;
             this.manaCost = manaCost;
+           
         }
 
 

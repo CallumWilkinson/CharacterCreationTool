@@ -21,7 +21,7 @@ namespace CharacterCreation
             : base("Fireball", 30, 10)
         {
            
-
+            
         }
 
         //methods

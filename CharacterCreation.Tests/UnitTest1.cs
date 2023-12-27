@@ -13,38 +13,38 @@ namespace CharacterCreation.Tests
         }
 
 
-        //[Test(Description = "Mage attacks warrior")]
-        //public void TestAttack2()
-        //{
-        //    //Given
-        //    var mage = new Mage("Nibzy");
-        //    var warrior = new Warrior("Chadwar");
-               
-
-        //    //When
-        //    mage.AttackCharacter(warrior);
-        //    int warriorHealth = warrior.BaseHealth;
-
-        //    //Then
-        //    Assert.That(warriorHealth, Is.EqualTo(90));
-        //}
+        [Test(Description = "Mage attacks warrior")]
+        public void TestAttack()
+        {
+            //Given
+            var mage = new Mage("Nibzy", 100, 20);
+            var warrior = new Warrior("Chadwar", 100, 10);
 
 
-        //[Test(Description = "Make a warrior called Vein")]
-        //public void testName()
-        //{
-        //    var warrior = new Warrior("Vein");
+            //When
+            mage.AttackCharacter(warrior);
+            int warriorHealth = warrior.BaseHealth;
+
+            //Then
+            Assert.That(warriorHealth, Is.EqualTo(80));
+        }
 
 
-        //    string warName = warrior.Name;
+        [Test(Description = "Make a warrior called Vein")]
+        public void testName()
+        {
+            var warrior = new Warrior("Vein", 100, 20);
 
 
-        //    Assert.That(warName, Is.EqualTo("Vein"));
-        //}
+            string warName = warrior.Name;
 
 
-        
-      
+            Assert.That(warName, Is.EqualTo("Vein"));
+        }
+
+
+
+
 
         [Test(Description ="mage attacks then heals")]
 

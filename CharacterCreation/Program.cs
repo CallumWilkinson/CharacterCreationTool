@@ -38,7 +38,7 @@ namespace CharacterCreation
             //combat starts
 
             //make a warrior
-            Warrior enemy1 = new Warrior("ChadWarrior", 100, 30);
+            Warrior enemy1 = new Warrior("Warrior NPC", 100, 30);
             Console.WriteLine("You encountered a warrior called " + enemy1.Name);
             Console.WriteLine("Player health: " + player.BaseHealth +
                 "\nPlayer attack: " + player.MeleeDamage);
@@ -61,6 +61,8 @@ namespace CharacterCreation
                     Console.WriteLine("must enter 1 to attack");
                     break;
 
+
+                
 
             }
 
