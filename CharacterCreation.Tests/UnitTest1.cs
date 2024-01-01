@@ -4,6 +4,8 @@ using NUnit.Framework;
 using CharacterCreation.Characters;
 using CharacterCreation.Spells;
 using static System.Net.Mime.MediaTypeNames;
+using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace CharacterCreation.Tests
 {
@@ -153,6 +155,53 @@ namespace CharacterCreation.Tests
 
 
 
+        }
+
+
+        [Test(Description ="mage casts fireball, warrior casts frostbolt, mage heals, warrior auto attacks and mage casts frostbolt")]
+        public void combat4()
+        {
+            //given
+            var mage = new Mage("Callum", 100);
+            var warrior = new Warrior("Hellgoodwar", 100);
+            var autoattack = new AutoAttack();
+            var fireball = new Fireball();
+            var frostbolt = new Frostbolt();
+            var healingtouch = new Healing_Touch();
+
+
+            //when 
+            mage.CastDamageSpell(fireball, warrior);
+
+            //then
+            Assert.That(warrior.BaseHealth, Is.EqualTo(70));
+
+            //when
+            warrior.CastDamageSpell(frostbolt, mage);
+
+            //then
+            Assert.That(mage.BaseHealth, Is.EqualTo(80));
+
+            //when
+            mage.CastHealingSpell(healingtouch, mage);
+
+            //then
+            Assert.That(mage.BaseHealth, Is.EqualTo(100));
+
+            //when 
+            warrior.CastDamageSpell(autoattack, mage);
+
+            //then
+            Assert.That(mage.BaseHealth, Is.EqualTo(95));
+
+            //when
+            mage.CastDamageSpell(frostbolt, warrior);
+
+            //then
+            Assert.That(warrior.BaseHealth, Is.EqualTo(50));
+
+            
+            
         }
 
     }
