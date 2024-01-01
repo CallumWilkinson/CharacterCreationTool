@@ -41,6 +41,13 @@ namespace CharacterCreation.Characters
         }
 
 
+        //character takes healing to increase health by x ammount
+        public void TakeHealing(int healpower)
+        {
+            BaseHealth = Math.Max(0, BaseHealth + healpower);
+        }
+
+
         //character reduces its base mana by x ammount
         public void ReduceMana(int manaCost)
         {
@@ -56,12 +63,14 @@ namespace CharacterCreation.Characters
             ReduceMana(spell.manaCost);
         }
 
-
-        //character heals itself, increaseing its health by x ammount
-        public void HealSelf()
+        //character casts a healing spell
+        public void CastHealingSpell(HealingSpell spell, Character target)
         {
-            BaseHealth = Math.Max(0, BaseHealth + HealPower);
+            target.TakeHealing(spell.healPower);
+            ReduceMana(spell.manaCost);
         }
+
+
 
 
     }

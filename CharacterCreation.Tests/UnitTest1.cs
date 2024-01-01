@@ -57,6 +57,7 @@ namespace CharacterCreation.Tests
             var mage = new Mage("Player1", 100);
             var warrior = new Warrior("NPC", 100);
             var autoattack = new AutoAttack();
+            var healingtouch = new Healing_Touch();
             
 
             //When
@@ -72,7 +73,7 @@ namespace CharacterCreation.Tests
             Assert.That(mage.BaseHealth, Is.EqualTo(95));
 
             //when
-            mage.HealSelf();
+            mage.CastHealingSpell(healingtouch, mage);
 
             //then
             Assert.That(mage.BaseHealth, Is.EqualTo(105));
@@ -136,12 +137,19 @@ namespace CharacterCreation.Tests
             var mage = new Mage("Callum", 100);
             var warrior = new Warrior("Jamus",100);
             var autoattack = new AutoAttack();
+            var healingtouch = new Healing_Touch();
 
             //when
             warrior.CastDamageSpell(autoattack, mage);
 
             //then
-            mage.TakeDamage(autoattackdamage)
+            Assert.That(mage.BaseHealth, Is.EqualTo(95));
+
+            //when
+            mage.CastHealingSpell(healingtouch, mage);
+
+            //then
+            Assert.That(mage.BaseHealth, Is.EqualTo(100));
 
 
 
