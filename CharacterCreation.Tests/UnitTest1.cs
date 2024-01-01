@@ -76,13 +76,13 @@ namespace CharacterCreation.Tests
             mage.CastHealingSpell(healingtouch, mage);
 
             //then
-            Assert.That(mage.BaseHealth, Is.EqualTo(105));
+            Assert.That(mage.BaseHealth, Is.EqualTo(100));
 
             //when 
             warrior.CastDamageSpell(autoattack, mage);
 
             //then
-            Assert.That(mage.BaseHealth, Is.EqualTo(100));
+            Assert.That(mage.BaseHealth, Is.EqualTo(95));
 
 
            

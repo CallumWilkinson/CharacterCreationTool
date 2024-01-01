@@ -44,7 +44,7 @@ namespace CharacterCreation.Characters
         //character takes healing to increase health by x ammount
         public void TakeHealing(int healpower)
         {
-            BaseHealth = Math.Max(0, BaseHealth + healpower);
+            BaseHealth = Math.Min(100, BaseHealth + healpower);
         }
 
 
