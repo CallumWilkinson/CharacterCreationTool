@@ -128,6 +128,25 @@ namespace CharacterCreation.Tests
             Assert.That(warrior.BaseHealth, Is.EqualTo(180));
         }
 
+        [Test(Description ="mage casts healing touch after taking damage from a warrior")]
+        public void castinghealingtouch()
+        {
+
+            //given
+            var mage = new Mage("Callum", 100);
+            var warrior = new Warrior("Jamus",100);
+            var autoattack = new AutoAttack();
+
+            //when
+            warrior.CastDamageSpell(autoattack, mage);
+
+            //then
+            mage.TakeDamage(autoattackdamage)
+
+
+
+        }
+
     }
     
 }
