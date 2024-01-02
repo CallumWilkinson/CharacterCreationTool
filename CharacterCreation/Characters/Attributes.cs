@@ -8,8 +8,22 @@ namespace CharacterCreation.Characters
 {
     public class Attributes
     {
-        public int mana;
-        public int health;
+        //fields
+        public int Level;
+        public int BaseHealth { get; private set; }
+
+
+        //constructor
+        public Attributes(int level, int basehealth) 
+        {
+            Level = level;
+            BaseHealth = basehealth;
+        }
+
+
+
+        
+        
 
     }
 }

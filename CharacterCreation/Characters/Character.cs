@@ -13,19 +13,30 @@ namespace CharacterCreation.Characters
         //FIELDS
         public string Name { get; set; }
 
-        public int BaseHealth { get; private set; }
+        public int BaseHealth;
 
         public int BaseMana = 100;
 
         public int HealPower = 10;
 
+        public Attributes CharacterAttributes { get; private set; }
+
+       
+
+        
+
+
 
 
         //CONSTRUCTOR
-        public Character(string name, int baseHealth)
+        public Character(string name, int baseHealth, int level)
         {
             Name = name;
-            BaseHealth = baseHealth;
+            CharacterAttributes = new Attributes(level, baseHealth);
+            BaseHealth = CharacterAttributes.BaseHealth;
+            
+
+           
             
 
         }
@@ -37,6 +48,7 @@ namespace CharacterCreation.Characters
         public void TakeDamage(int damage)
         {
             BaseHealth = Math.Max(0, BaseHealth - damage); // Ensure health doesn't go below 0
+            
 
         }
 
