@@ -15,9 +15,9 @@ namespace CharacterCreation.Characters
 
         public int BaseHealth;
 
-        public int BaseMana = 100;
+        public int BaseMana;
 
-        public int HealPower = 10;
+      
 
         public Attributes CharacterAttributes { get; private set; }
 
@@ -34,6 +34,7 @@ namespace CharacterCreation.Characters
             Name = name;
             CharacterAttributes = new Attributes(level);
             BaseHealth = CharacterAttributes.BaseHealth;
+            BaseMana = CharacterAttributes.BaseMana;
 
         }
 

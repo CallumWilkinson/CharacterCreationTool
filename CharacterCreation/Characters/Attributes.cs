@@ -12,6 +12,7 @@ namespace CharacterCreation.Characters
         //fields
         public int Level;
         public int BaseHealth;
+        public int BaseMana;
         
 
 
@@ -23,6 +24,7 @@ namespace CharacterCreation.Characters
         {
             Level = level;
             BaseHealth = 90 + (Level * 10);
+            BaseMana = 90 + (Level * 10);
         }
 
 
