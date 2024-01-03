@@ -29,15 +29,11 @@ namespace CharacterCreation.Characters
 
 
         //CONSTRUCTOR
-        public Character(string name, int baseHealth, int level)
+        public Character(string name, int level)
         {
             Name = name;
-            CharacterAttributes = new Attributes(level, baseHealth);
+            CharacterAttributes = new Attributes(level);
             BaseHealth = CharacterAttributes.BaseHealth;
-            
-
-           
-            
 
         }
 

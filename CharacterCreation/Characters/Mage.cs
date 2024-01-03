@@ -14,8 +14,8 @@ namespace CharacterCreation.Characters
 
 
         //constructor with parameters
-        public Mage(string name, int mageHealth, int level)
-            : base(name, mageHealth, level)
+        public Mage(string name, int level)
+            : base(name, level)
         {
 
         }

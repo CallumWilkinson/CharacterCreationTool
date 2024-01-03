@@ -21,8 +21,8 @@ namespace CharacterCreation.Tests
         public void TestAttack()
         {
             //Given
-            var mage = new Mage("Nibzy", 100, 1);
-            var warrior = new Warrior("Chadwar", 100, 1);
+            var mage = new Mage("Nibzy", 1);
+            var warrior = new Warrior("Chadwar", 1);
             var autoattack = new AutoAttack();
 
 
@@ -38,7 +38,7 @@ namespace CharacterCreation.Tests
         [Test(Description = "Make a warrior called Vein")]
         public void testName()
         {
-            var warrior = new Warrior("Vein", 100, 1);
+            var warrior = new Warrior("Vein", 1);
 
 
             string warName = warrior.Name;
@@ -56,8 +56,8 @@ namespace CharacterCreation.Tests
         public void combat2()
         {
             //Given
-            var mage = new Mage("Player1", 100, 1);
-            var warrior = new Warrior("NPC", 100, 1);
+            var mage = new Mage("Player1", 1);
+            var warrior = new Warrior("NPC", 1);
             var autoattack = new AutoAttack();
             var healingtouch = new Healing_Touch();
 
@@ -98,8 +98,8 @@ namespace CharacterCreation.Tests
         public void castingfireball()
         {
             //given
-            var mage = new Mage("Nibz", 100, 1);
-            var warrior = new Warrior("James", 200, 1);
+            var mage = new Mage("Nibz", 1);
+            var warrior = new Warrior("James", 1);
             var fireball = new Fireball();
 
 
@@ -109,7 +109,7 @@ namespace CharacterCreation.Tests
 
             //then
             Assert.That(mage.BaseMana, Is.EqualTo(70));
-            Assert.That(warrior.BaseHealth, Is.EqualTo(170));
+            Assert.That(warrior.BaseHealth, Is.EqualTo(70));
         }
 
         [Test(Description = "Mage casts frostbolt on warrior")]
@@ -117,8 +117,8 @@ namespace CharacterCreation.Tests
         public void castingfrostbolt()
         {
             //given
-            var mage = new Mage("Nibz", 100, 1);
-            var warrior = new Warrior("James", 200, 1);
+            var mage = new Mage("Nibz", 1);
+            var warrior = new Warrior("James", 1);
             var frostbolt = new Frostbolt();
 
 
@@ -128,7 +128,7 @@ namespace CharacterCreation.Tests
 
             //then
             Assert.That(mage.BaseMana, Is.EqualTo(50));
-            Assert.That(warrior.BaseHealth, Is.EqualTo(180));
+            Assert.That(warrior.BaseHealth, Is.EqualTo(80));
         }
 
         [Test(Description = "mage casts healing touch after taking damage from a warrior")]
@@ -136,8 +136,8 @@ namespace CharacterCreation.Tests
         {
 
             //given
-            var mage = new Mage("Callum", 100, 1);
-            var warrior = new Warrior("Jamus", 100, 1);
+            var mage = new Mage("Callum", 1);
+            var warrior = new Warrior("Jamus", 1);
             var autoattack = new AutoAttack();
             var healingtouch = new Healing_Touch();
 
@@ -162,8 +162,8 @@ namespace CharacterCreation.Tests
         public void combat4()
         {
             //given
-            var mage = new Mage("Callum", 100, 1);
-            var warrior = new Warrior("Hellgoodwar", 100, 1);
+            var mage = new Mage("Callum", 1);
+            var warrior = new Warrior("Hellgoodwar", 1);
             var autoattack = new AutoAttack();
             var fireball = new Fireball();
             var frostbolt = new Frostbolt();
@@ -204,21 +204,7 @@ namespace CharacterCreation.Tests
 
         }
 
-        //[Test(Description = "make a character and set its level")]
-        //public void setcharlevel() 
-        //{
-        //    //given
-        //    var mage = new Mage("nibz", 100, 1);
-           
-
-
-        //    //when
-
-
-        //    //then
-
-
-        //}
+        
 
     }
     

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,14 +11,18 @@ namespace CharacterCreation.Characters
     {
         //fields
         public int Level;
-        public int BaseHealth { get; private set; }
+        public int BaseHealth;
+        
+
+
+      
 
 
         //constructor
-        public Attributes(int level, int basehealth) 
+        public Attributes(int level) 
         {
             Level = level;
-            BaseHealth = basehealth;
+            BaseHealth = 90 + (Level * 10);
         }
 
 
