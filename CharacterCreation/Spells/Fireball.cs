@@ -20,7 +20,7 @@ namespace CharacterCreation.Spells
         public Fireball()
             : base("Fireball", 30, 30)
         {
-
+            //fireball name manacost and damage should be in an external CSV file
 
         }
 

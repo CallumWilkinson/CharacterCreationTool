@@ -26,8 +26,6 @@ namespace CharacterCreation.Characters
         
 
 
-
-
         //CONSTRUCTOR
         public Character(string name, int level)
         {
