@@ -20,7 +20,7 @@ namespace CharacterCreation.Spells
         public Fireball()
             : base("Fireball", 30, 30)
         {
-
+            //spelldamage, manacost and spell name to be in seperate csv
 
         }
 
