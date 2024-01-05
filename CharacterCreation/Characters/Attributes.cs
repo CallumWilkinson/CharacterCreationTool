@@ -15,7 +15,7 @@ namespace CharacterCreation.Characters
         
 
 
-      
+      //next add rage 
 
 
         //constructor
