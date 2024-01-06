@@ -17,6 +17,8 @@ namespace CharacterCreation.Characters
 
       //next add rage 
 
+        //add csv
+
 
         //constructor
         public Attributes(int level) 
