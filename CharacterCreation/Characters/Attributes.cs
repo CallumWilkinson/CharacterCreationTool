@@ -22,6 +22,8 @@ namespace CharacterCreation.Characters
         //add csv
 
         //add csv
+
+        //add
         //constructor
         public Attributes(int level) 
         {
