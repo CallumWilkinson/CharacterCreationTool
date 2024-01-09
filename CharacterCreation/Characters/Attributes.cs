@@ -12,18 +12,9 @@ namespace CharacterCreation.Characters
         //fields
         public int Level;
         public int BaseHealth;
-        
+         
 
-
-      //next add rage 
-
-        //add csv
-
-        //add csv
-
-        //add csv
-
-        //add
+      
         //constructor
         public Attributes(int level) 
         {
