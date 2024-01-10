@@ -13,6 +13,8 @@ namespace CharacterCreation
             string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Spells.xlsx");    
             using (var reader = new StreamReader(filePath))
 
+                //file
+
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
