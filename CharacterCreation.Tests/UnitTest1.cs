@@ -204,6 +204,12 @@ namespace CharacterCreation.Tests
 
         }
 
+        [Test(Description = "testing loadcsv function")]
+        public void csvloading()
+        {
+            var csv = new Data();
+            csv.LoadData();
+        }
         
 
     }

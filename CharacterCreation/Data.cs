@@ -6,22 +6,18 @@ using System.Threading.Tasks;
 
 namespace CharacterCreation
 {
-    internal class Data
+    public class Data
     {
         public void LoadData() 
         {
-            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Spells.xlsx");    
-            using (var reader = new StreamReader(filePath))
-
-                //file
-
-                while (!reader.EndOfStream)
+            var csvPath = @"C:\Users\cmw65\Documents\myCode\CharacterCreation\Spells.csv";
+            using( var reader = new StreamReader(csvPath))
+            {
+                while(reader.EndOfStream == false)
                 {
-                    var line = reader.ReadLine();
-                    var values = line.Split(',');
-
-                    // Add your test logic here
+                    var content = reader.ReadLine();
                 }
+            }
         }
 
     }
