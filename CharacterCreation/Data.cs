@@ -16,6 +16,8 @@ namespace CharacterCreation
                 while(reader.EndOfStream == false)
                 {
                     var content = reader.ReadLine();
+
+                    //edit
                 }
             }
         }
