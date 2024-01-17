@@ -18,6 +18,8 @@ namespace CharacterCreation
                     var content = reader.ReadLine();
 
                     //edit
+
+                    //comment
                 }
             }
         }
