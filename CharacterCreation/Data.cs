@@ -11,17 +11,59 @@ namespace CharacterCreation
         public void LoadData() 
         {
             var csvPath = @"C:\Users\cmw65\Documents\myCode\CharacterCreation\Spells.csv";
-            using( var reader = new StreamReader(csvPath))
+
+
+            //intitialise values
+            int rows = 0;
+            int cols = 0;
+
+            //first loop to determine size of the array
+            using ( var reader = new StreamReader(csvPath))
             {
-                while(reader.EndOfStream == false)
+
+
+                //ignore headers
+                reader.ReadLine();
+
+                while(!reader.EndOfStream)
                 {
-                    var content = reader.ReadLine();
+                    var line = reader.ReadLine();
+                    var values = line.Split(',');
+                    cols = Math.Max(cols, values.Length);
+                    rows++;
+                }
 
-                    //edit
 
-                    //comment
+               
+               
+            }
+
+
+            //initialise 2D array
+            string[,] spellsArray = new string[rows, cols];
+
+
+            //populate the array
+            int currentRow = 0;
+            using (var reader = new StreamReader(csvPath))
+            {
+
+                //ignore headers
+                reader.ReadLine();
+
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    var values = line.Split(',');
+
+                    for (int i = 0; i < values.Length; i++)
+                    {
+                        spellsArray[currentRow, i] = values[i];
+                    }
+                    currentRow++;
                 }
             }
+
         }
 
     }
